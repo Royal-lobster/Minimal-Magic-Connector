@@ -8,7 +8,7 @@ export const config = createConfig({
 	connectors: [
 		injected(),
 		magicConnector({
-			apiKey: process.env.NEXT_PUBLIC_MAGIC_API_KEY as string,
+			apiKey: import.meta.env.VITE_MAGIC_API_KEY as string,
 			requestAuthenticationMethod: async () => ({
 				provider: "google",
 			}),
