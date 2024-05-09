@@ -83,9 +83,7 @@ export function magicConnector(parameters: MagicConnectorParams) {
 				return magic.rpcProvider;
 			},
 			isAuthorized: async () => {
-				const isLoggedIn = await magic.user.isLoggedIn();
-				console.log("isAuthorized", isLoggedIn);
-				return isLoggedIn;
+				return await magic.user.isLoggedIn();
 			},
 			onAccountsChanged: async () => {},
 			onChainChanged: async () => {},
